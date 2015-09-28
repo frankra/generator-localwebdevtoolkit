@@ -1,6 +1,6 @@
 {
   "name": "generator-localwebdevtoolkit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Local Web Development Toolkit",
   "keywords": [
     "yeoman-generator"
@@ -13,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frankrafael/LocalWebDevelopmentToolkit.git"
+    "url": "git+https://github.com/frankrafael/generator-localwebdevtoolkit.git"
   },
   "author": "Rafael Frank <franktestrlz@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frankrafael/LocalWebDevelopmentToolkit/issues"
+    "url": "https://github.com/frankrafael/generator-localwebdevtoolkit/issues"
   },
-  "homepage": "https://github.com/frankrafael/LocalWebDevelopmentToolkit#readme",
+  "homepage": "https://github.com/frankrafael/generator-localwebdevtoolkit#readme",
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-connect-proxy": "^0.2.0",
