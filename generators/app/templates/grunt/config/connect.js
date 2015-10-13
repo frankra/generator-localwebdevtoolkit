@@ -1,6 +1,6 @@
 'use strict';
 
-var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+var proxySnippet = require('grunt-middleware-proxy/lib/utils').getProxyMiddleware();
 var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
 
 module.exports = function(grunt) {
@@ -25,13 +25,16 @@ module.exports = function(grunt) {
                 {
                     context: '/google',
                     host: 'google.com',
-                    port: 80,
-                    https: true
+                    https: true,
+					corpProxy : {
+						host : 'proxy',
+						port : '8080'
+					}
                 }
             ]
         }
     });
 	grunt.loadNpmTasks('grunt-connect-rewrite');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-connect-proxy');
+	grunt.loadNpmTasks('grunt-middleware-proxy');
 };

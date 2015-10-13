@@ -43,7 +43,7 @@ module.exports = generators.Base.extend({
         this._installDependencies = function(){
             this.log('Installing dependencies');
             this.npmInstall(["grunt"],{ 'save': true });
-            this.npmInstall(["grunt-connect-proxy"],{ 'save': true });
+            this.npmInstall(["grunt-middleware-proxy"],{ 'save': true });
             this.npmInstall(["grunt-connect-rewrite"],{ 'save': true });
             this.npmInstall(["grunt-contrib-connect"],{ 'save': true });
             this.npmInstall(["grunt-contrib-watch"],{ 'save': true });
