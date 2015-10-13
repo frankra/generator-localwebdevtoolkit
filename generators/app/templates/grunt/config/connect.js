@@ -1,6 +1,6 @@
 'use strict';
 
-var proxySnippet = require('grunt-middleware-proxy/lib/utils').getProxyMiddleware();
+var proxySnippet = require('grunt-middleware-proxy/lib/Utils').getProxyMiddleware();
 var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
 
 module.exports = function(grunt) {
