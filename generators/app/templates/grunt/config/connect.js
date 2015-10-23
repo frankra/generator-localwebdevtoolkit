@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                     context: '/google',
                     host: 'google.com',
                     https: true,
-					corpProxy : {
+					proxy : {
 						host : 'proxy',
 						port : '8080'
 					}
