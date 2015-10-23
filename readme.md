@@ -1,5 +1,5 @@
 # Simple NodeJS Server with Proxy included
-The purpose of this module is help web developers to quickly run and develop web applications on their local NodeJS environment, and through the Bundled Proxy setup, connect to the actual data server (Solve [Same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) problems), without requiring modifications to the application code.
+The purpose of this module is help web developers to quickly run and develop web applications on their local NodeJS environment, and through the Bundled Proxy setup, connect to the actual data server (Trick the [Same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) standards), without requiring modifications to the application code.
 
 #### Use case
 ##### Constraints
@@ -13,7 +13,7 @@ The purpose of this module is help web developers to quickly run and develop web
 
 1. Install [Yeoman](http://yeoman.io/) by `npm install yo -g`
 2. Install [GruntJS](http://gruntjs.com/) by `npm install grunt-cli -g`
-3. Install the toolkit `npm install generator-localwebdevtoolkit`
+3. Install the toolkit `npm install generator-localwebdevtoolkit -g`
 4. Navigate to your project folder
 5. Run `yo localwebdevtoolkit`
 
@@ -35,7 +35,7 @@ Feel free to edit these to fit your needs.
 
 Currently this scaffold ships the following modules, so follow the links to have further information about the supported API.
 
-* [grunt-connect-proxy](https://github.com/drewzboto/grunt-connect-proxy)
+* [grunt-middleware-proxy](https://github.com/frankrafael/grunt-middleware-proxy)
 * [grunt-connect-rewrite](https://github.com/viart/grunt-connect-rewrite)
 * [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect)
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
