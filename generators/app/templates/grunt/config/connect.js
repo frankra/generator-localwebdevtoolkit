@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			hostname: 'localhost'
 		},
 		rules : [
-			{from:'^/b', to:'/index.html'}
+			{from:'/b', to:'/index.html'}
 		],
 		server: {
             options :{
