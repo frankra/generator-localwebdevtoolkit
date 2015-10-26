@@ -33,6 +33,21 @@ yourprojectfolder/
 ```
 Feel free to edit these to fit your needs.
 
+#### Usage
+
+Once you are finished on the setup, all you have to do is place your source and test files under the project folder, like:
+
+
+```
+yourprojectfolder/
+  *here you place your source/test files
+  grunt/
+    config/
+       *here you place all configuration files*
+    tasks/
+       *here you map the configuration files to tasks*
+```
+
 Currently this scaffold ships the following modules, so follow the links to have further information about the supported API.
 
 * [grunt-middleware-proxy](https://github.com/frankrafael/grunt-middleware-proxy)
