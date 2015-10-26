@@ -2,25 +2,6 @@ var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
     bootstrap : function(){
-        this.prompt({
-            type : 'input',
-            name : 'yorno',
-            message : 'Should I create a package.json file? [y/n]',
-            default : 'y'
-        },
-        function(mParams){
-            var bShouldAddPackageJson = mParams && mParams.yorno && mParams.yorno.toUpperCase() === 'Y' ? true : false;
-            if (bShouldAddPackageJson){
-                this.log('Copying package.json');
-                this._copyPackageFile();
-            } else {
-                this.log('Skipped copy of package.json');
-            }
-
-            this._copyGruntConfiguration();
-            this._installDependencies();
-        }.bind(this)),
-
         this._copyGruntConfiguration = function () {
             this.log('Copying Grunt configuration');
             this.fs.copyTpl(
@@ -32,13 +13,13 @@ module.exports = generators.Base.extend({
                 this.templatePath('Gruntfile.js'),
                 this.destinationPath('Gruntfile.js')
             );
-        },
+        };
         this._copyPackageFile = function () {
             this.fs.copyTpl(
                 this.templatePath('package.json'),
                 this.destinationPath('package.json')
             );
-        },
+        };
 
         this._installDependencies = function(){
             this.log('Installing dependencies');
@@ -49,6 +30,10 @@ module.exports = generators.Base.extend({
             this.npmInstall(["grunt-contrib-watch"],{ 'save': true });
             this.npmInstall(["include-all"],{ 'save': true });
             this.npmInstall(["path"],{ 'save': true });
-        }
+        };
+        
+        this._copyPackageFile(); 
+        this._copyGruntConfiguration();
+        this._installDependencies();
     }
 });
