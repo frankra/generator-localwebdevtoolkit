@@ -21,6 +21,13 @@ module.exports = generators.Base.extend({
             );
         };
 
+        this._copyGitIgnoreFile = function(){
+            this.fs.copyTpl(
+                this.templatePath('.gitignore'),
+                this.destinationPath('.gitignore')
+            );
+        };
+
         this._installDependencies = function(){
             this.log('Installing dependencies');
             this.npmInstall(["grunt"],{ 'save': true });
@@ -31,9 +38,12 @@ module.exports = generators.Base.extend({
             this.npmInstall(["include-all"],{ 'save': true });
             this.npmInstall(["path"],{ 'save': true });
         };
+
         
         this._copyPackageFile(); 
         this._copyGruntConfiguration();
+        this._copyGitIgnoreFile();
         this._installDependencies();
+
     }
 });
