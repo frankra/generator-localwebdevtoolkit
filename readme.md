@@ -1,13 +1,12 @@
 # Simple NodeJS Server with Proxy included
 The purpose of this module is help web developers to quickly run and develop web applications on their local NodeJS environment, and through the Bundled Proxy setup, connect to the actual data server (Trick the [Same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) standards), without requiring modifications to the application code.
 
-#### Use case
 ##### Constraints
 * You are developing the UI(HTML) of your web application locally.
 * You have the database server located somewhere on the web.
 
-##### Problem
-* You want to connect your application (localhost) to the database server (https://...), so you can test with the data that you actually have.
+#### Problem
+* You want to connect your application (localhost) to the database server (https://...), so you can test with the data that you actually have on your external web server (e.g. Amazon.com).
 
 #### Solution
 
