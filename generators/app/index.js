@@ -23,7 +23,7 @@ module.exports = generators.Base.extend({
 
         this._copyGitIgnoreFile = function(){
             this.fs.copyTpl(
-                this.templatePath('.gitignore'),
+                this.templatePath('gitignore'),
                 this.destinationPath('.gitignore')
             );
         };
@@ -39,8 +39,8 @@ module.exports = generators.Base.extend({
             this.npmInstall(["path"],{ 'save': true });
         };
 
-        
-        this._copyPackageFile(); 
+
+        this._copyPackageFile();
         this._copyGruntConfiguration();
         this._copyGitIgnoreFile();
         this._installDependencies();
