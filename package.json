@@ -1,6 +1,6 @@
 {
   "name": "generator-localwebdevtoolkit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Local Web Development Toolkit",
   "keywords": [
     "yeoman-generator"
